@@ -1,0 +1,6 @@
+<p> Are you sure want to delete this item {{item.product_name}} </p>
+<form method = 'POST'>
+    {% csrf_token %}
+    <button type = 'submit'> yes </button>
+    <a href = "{% url 'userapp:items' %}" >Cancel </a>
+</form>    

@@ -1,0 +1,16 @@
+{% extends 'userapp/base.html' %}
+{% block body%}
+<div class = 'm-10 flex'>
+    <div>
+        <img class = 'w-100' src = '{{item.image}} ' >
+    </div>
+    <div class = 'm-5'>
+        <h1> {{item.product_name}}</h1>
+        <h1>{{item.price}} </h1>
+    </div>
+    <div class = 'm-5'>
+        <a href = "{% url 'userapp:update_item' item.product_name %}">Edit </a> 
+        <a href = "{% url 'userapp:delete_item' item.product_name %}"> Delete </a>
+    </div>
+</div>     
+{% endblock %}               

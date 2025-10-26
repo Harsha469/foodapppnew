@@ -1,0 +1,26 @@
+{% extends 'userapp/base.html' %}
+
+{% block body %}
+    <div>
+        {% for item in user %}
+        <div class = 'm-10 flex '> 
+            <div> 
+                <img  class = 'w-64' src = '{{item.image}}' >
+            </div>
+            <div class = 'm-10'> 
+                <p>{{item.product_name}} </p>
+                <p>{{item.price}} </p>
+            </div>
+            <div class = 'm-10'> 
+                <a href = "{% url 'userapp:each_item' item.product_name %}"> view details </a>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>          
+    
+      
+{% endblock %}    
+
+
